@@ -18,8 +18,11 @@ Great! From this we learned that flag 1 is encoded in this text:
 
 Its encoded using **XOR Encoding** and we can decode the flag if we have the decryption key. But for now we have no idea what's the encryption key, so let's analyse the code given to us to see if we can find anything useful to break the cipher.
 ### code analysis
+
+Now lets take a look at the code, download it and open it up with any code editor of your preference. Also if you have any trouble with code analysis you can put it into chatgpt and ask it to explain the code. But, basically the code is a demo of the server on port 1337 the only diference being the fake flag.
+
 <details>
-<summary>code</summary>
+<summary>full code</summary>
   
 This code is a demo of the server located on port 1337
 
@@ -89,10 +92,12 @@ and last and most importantly,
 res = ''.join(random.choices(string.ascii_letters + string.digits, k=5))
 key = str(res)
 ```
-from this we conclude that **the encryption key is alphanumerical and only 5 digits in length**  
+from this we conclude that **the encryption key is alphanumerical and only 5 digits in length**
+
+with these two clues in mind we can try to find the encyption key and break the cipher.
 ![]()
 ## first flag
-
+A common approach to cipher cracking is to look for repeating letters and patterns
 ![]()
 ## second flag
 
