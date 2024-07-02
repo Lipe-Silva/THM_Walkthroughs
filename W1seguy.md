@@ -94,10 +94,16 @@ key = str(res)
 ```
 from this we conclude that **the encryption key is alphanumerical and only 5 digits in length**
 
-with these two clues in mind we can try to find the encyption key and break the cipher.
+with these two clues in mind we can try to find the encyption key and break the cipher. 
 ![]()
 ## first flag
-A common approach to cipher cracking is to look for repeating letters and patterns
+A common approach to cipher cracking is to look for repeating letters and patterns. As you might have noticed every flag on Tryhackme starts with "THM{" we can use this information to partialiy crack the key.
+
+We can use a tool like https://gchq.github.io/CyberChef/ to achive this
+
+Basically if we have a piece of the input text and the corresponding piece of the cipher text we can produce a piece of the encryption key
+
+Since THM{ are the first characters in the original text they must be the first 4 bits in the cipher text and from that we can get the first four letters in the encryption key 
 ![]()
 ## second flag
 
